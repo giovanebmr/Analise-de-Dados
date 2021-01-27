@@ -1,0 +1,17 @@
+https://api.cloudkarafka.com/console/      /       topics
+
+
+https://api.cloudkarafka.com/console   /   DATAILS
+
+
+
+
+
+CLOUDKARAFKA_BROKERS=  ***************** , ***************** 
+CLOUDKARAFKA_USERNAME=  ***********
+
+
+CLOUDKARAFKA_PASSWORD=  ******************
+
+CLOUDKARAFKA_TOPIC_PREFIX=  ******************
+
