@@ -1,1 +1,1 @@
-https://api.cloudkarafka.com/console/
+https://www.cloudkarafka.com/
