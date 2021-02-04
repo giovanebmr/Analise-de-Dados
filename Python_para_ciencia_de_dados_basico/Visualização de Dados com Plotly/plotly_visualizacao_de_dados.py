@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-
 # Commented out IPython magic to ensure Python compatibility.
 # %pip install cufflinks
 
@@ -10,12 +9,10 @@
 # %pip install chart-studio
 
 import pandas as pd
-import cufflinks as cl
+import cufflinks as cf
 
 #https://chart-studio.plotly.com/settings/api
 #import plotly.tools as tls
-#A partir do plotly versão 4.0, todas as funcionalidades relacionadas ao Chart Studio foram movidas para a chart_studiobiblioteca. 
-#https://plotly.com/python/v4-migration/#online-features-plotlyplotly-moved-to-chartstudio-package
 #from chart_studio.plotly import plot, iplot
 import chart_studio
 
@@ -40,3 +37,16 @@ layout = {
 }
 
 df.iplot(filename='grafico-de-linhas-plotly', layout=layout)
+
+#https://plotly.com/python/creating-and-updating-figures/
+
+import plotly.graph_objects as go
+
+fig = go.Figure(
+    data=[go.Bar(x=df.columns, y=tuple(df.max()))],
+    layout=layout
+)
+
+fig.show()
+
+chart_studio.plotly.image.save_as(format = "png", filename = "output.png", figure_or_data = fig, scale=5)
